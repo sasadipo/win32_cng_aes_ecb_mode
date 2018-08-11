@@ -85,7 +85,6 @@ _Success_(return == 0) int AES_ECB(
 		goto exit_;
 	}
 	// set chaining mode
-	// since our old AES algorithm is ECB, we use the same
 	bcryptResult = BCryptSetProperty(algHandle, BCRYPT_CHAINING_MODE, (PUCHAR)BCRYPT_CHAIN_MODE_ECB, sizeof(BCRYPT_CHAIN_MODE_ECB), 0);
 
 	if(!(BCRYPT_SUCCESS(bcryptResult)))
